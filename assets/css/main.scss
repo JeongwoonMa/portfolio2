@@ -1,8 +1,19 @@
 @import 'common';
 
-section {
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.about {
+    position: relative;
     height: 100svh;
     padding: 100px 0 60px;
     color: #fff;
     background-color: #000;
 }
+

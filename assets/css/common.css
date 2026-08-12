@@ -35,6 +35,7 @@ body {
   word-break: keep-all;
   line-height: 1.5;
   color: #fff;
+  background-color: #fff;
 }
 body *, body *::before, body *::after {
   box-sizing: border-box;

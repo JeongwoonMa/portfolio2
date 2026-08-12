@@ -12,7 +12,9 @@
     @include transition();
     text-align: center;
     border-radius: 6px;
+    color: #000;
     background-color: rgba($color: #fff, $alpha: .8);
+    mix-blend-mode: difference;
     z-index: 999;
     .container-fluid {
         display: flex;
@@ -133,6 +135,37 @@
                 visibility: visible;
             }
         }
+    }
+    @media(max-width: $lg) {
+        max-width: 50%;
+    }
+    @media(max-width: $md) {
+        max-width: 80%;
+    }
+}
+
+
+.img-bg {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transform: translate(-50%, -50%);
+    width: 5vw;
+    animation: rotate 30s linear infinite;
+    opacity: .8;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    img {
+        display: block;
+        width: 100%;
+    }
+    @media(max-width: $lg) {
+        bottom: 15px;
+        right: 15px;
+        width: 10vw;
+    }
+    @media(max-width: $md) {
+        width: 15vw;
     }
 }
 

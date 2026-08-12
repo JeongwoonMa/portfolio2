@@ -35,6 +35,7 @@ body {
   word-break: keep-all;
   line-height: 1.5;
   color: #fff;
+  background-color: #fff;
 }
 body *, body *::before, body *::after {
   box-sizing: border-box;
@@ -93,7 +94,9 @@ input, select, textarea {
   transition-delay: 0s;
   text-align: center;
   border-radius: 6px;
+  color: #000;
   background-color: rgba(255, 255, 255, 0.8);
+  mix-blend-mode: difference;
   z-index: 999;
 }
 #header .container-fluid {
@@ -213,4 +216,42 @@ input, select, textarea {
   max-height: calc(100svh - 60px);
   opacity: 1;
   visibility: visible;
+}
+@media (max-width: 1350px) {
+  #header {
+    max-width: 50%;
+  }
+}
+@media (max-width: 1024px) {
+  #header {
+    max-width: 80%;
+  }
+}
+
+.img-bg {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transform: translate(-50%, -50%);
+  width: 5vw;
+  animation: rotate 30s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+.img-bg img {
+  display: block;
+  width: 100%;
+}
+@media (max-width: 1350px) {
+  .img-bg {
+    bottom: 15px;
+    right: 15px;
+    width: 10vw;
+  }
+}
+@media (max-width: 1024px) {
+  .img-bg {
+    width: 15vw;
+  }
 }/*# sourceMappingURL=default.css.map */
