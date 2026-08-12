@@ -1,1 +1,80 @@
-/*# sourceMappingURL=default.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+body {
+  min-width: 360px;
+  width: 100%;
+  font-size: 16px;
+  word-break: keep-all;
+  line-height: 1.5;
+  color: #121212;
+}
+body *, body *::before, body *::after {
+  box-sizing: border-box;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none;
+  resize: none;
+}
+
+.visible-lg {
+  display: block !important;
+}
+@media (max-width: 1024px) {
+  .visible-lg {
+    display: none !important;
+  }
+}
+
+.visible-sm {
+  display: none !important;
+}
+@media (max-width: 1024px) {
+  .visible-sm {
+    display: block !important;
+  }
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1310px;
+}
+
+.container-fluid {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+}/*# sourceMappingURL=default.css.map */
