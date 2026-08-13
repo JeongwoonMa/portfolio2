@@ -6,8 +6,6 @@ const lenis = new Lenis({
     duration: 1.2,
 });
 
-
-
 // header관련
 const header = document.querySelector("#header");
 const btnOpen = document.querySelector(".btn-open");
