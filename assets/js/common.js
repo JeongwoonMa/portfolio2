@@ -6,11 +6,7 @@ const lenis = new Lenis({
     duration: 1.2,
 });
 
-function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
+
 
 // header관련
 const header = document.querySelector("#header");
