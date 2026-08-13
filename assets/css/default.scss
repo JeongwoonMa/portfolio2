@@ -14,7 +14,7 @@
     border-radius: 6px;
     color: #000;
     background-color: rgba($color: #fff, $alpha: .8);
-    mix-blend-mode: difference;
+    box-shadow: 0 2px 4px rgba($color: #000000, $alpha: .3);
     z-index: 999;
     .container-fluid {
         display: flex;
@@ -136,8 +136,11 @@
             }
         }
     }
+    &.hide {
+        transform: translate(-50%, calc(-100% - 20px));
+    }
     @media(max-width: $lg) {
-        max-width: 50%;
+        max-width: 70%;
     }
     @media(max-width: $md) {
         max-width: 80%;

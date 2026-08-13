@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+// font
+@mixin noto() {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,11 +36,13 @@ img {
 }
 
 body {
+    position: relative;
     min-width: 360px;
     width: 100%;
     font-size: 16px;
     word-break: keep-all;
     line-height: 1.5;
+    @include noto();
     color: #fff;
     background-color: #fff;
     *, *::before, *::after {
@@ -43,6 +56,7 @@ input, select, textarea {
     resize: none;
 }
 
+// breakPoints
 $sm: "768px";
 $md: "1024px";
 $lg: "1350px";
@@ -83,3 +97,7 @@ $xl: "1630px";
     padding: 0 15px;
 }
 
+
+#smooth-wrapper {
+    position: relative;
+}
