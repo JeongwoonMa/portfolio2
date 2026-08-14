@@ -1,47 +1,101 @@
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+const firstTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "section.first",
+        start: "top 1%",
+        end: "bottom 50%",
+    },
+    defaults: {
+        duration: 2,
+        opacity: 0,
+        ease: "power2.inOut",
+    },
+});
+firstTl
+    .from(".first h2", {
+        y: -50,
+        duration: 3,
+        stagger: 0.1,
+    })
+    .from(
+        ".first p",
+        {
+            x: -100,
+            rotation: 360,
+        },
+        "-=1.8",
+    )
+    .from(
+        ".first figure",
+        {
+            scale: 3,
+            rotation: 360,
+            duration: 1,
+        },
+        "-=2",
+    );
 
-const tl_1 = gsap.timeline({
-    scrolltrigger: {
-        trigger: 'section.about',
-        start: "top  20%",
-        end: "bottom 80%",
-        scrub: true
-    }
+const secondTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "section.second",
+        start: "top 0%",
+        end: "+=2000",
+        scrub: true,
+        pin: true,
+    },
+    defaults: {
+        opacity: 0,
+        ease: "power2.inOut",
+    },
 });
 
-tl_1.from(".about .title-txt",  {
-    x: 200,
-    opacity: 0,
-    duration: 2
-})
-.from('.about p', {
-    x: 200,
-    opacity: 0,
-    duration: 2
-}, '=-1.6')
-.from('.about figure', {
-    x: 300,
-    opacity: 0,
-    duration: 2
-},'=-1.8')
+secondTl
+    .from(".second h2", {
+        y: 1000,
+    })
+    .from(".second p", {
+        y: -1000,
+    })
+    .from(".second figure", {});
 
-const tl_2 = gsap.timeline( {
-    scrolltrigger: {
-        trigger: 'section.second',
-        start: "top 0%",
-        end:  "bottom 30%",
+const thirdTl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".third",
+        stat: "top 20%",
+        end: "+=5000",
         scrub: true,
-    }
-})
+        pin: true,
+    },
+    defaults: {
+        opacity: 0,
+    },
+});
 
-tl_2.from('.second .title-txt', {
-    x: 300,
-    opacity: 0,
+thirdTl.from(".third h2", {
+    x: 1000,
     duration: 2,
-},"=-1.5")
-.from('.second p', {
-    x: 300,
-    opacity: 0,
-    duration: 2
-})
+});
+thirdTl
+    .from(
+        ".third p",
+        {
+            x: -1000,
+            duration: 2,
+        },
+        "-=0.5",
+    )
+    .fromTo(
+        ".third figure",
+        {
+            scale: 1,
+            opacity: 1,
+        },
+        {
+            scale: 500,
+            opacity: 1,
+            backgroundColor: '#000',
+            duration: 30
+        },
+        "+=3",
+    );
