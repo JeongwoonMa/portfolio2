@@ -1,101 +1,30 @@
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
 
-const firstTl = gsap.timeline({
-    scrollTrigger: {
-        trigger: "section.first",
-        start: "top 1%",
-        end: "bottom 50%",
-    },
-    defaults: {
-        duration: 2,
-        opacity: 0,
-        ease: "power2.inOut",
-    },
-});
-firstTl
-    .from(".first h2", {
-        y: -50,
-        duration: 3,
-        stagger: 0.1,
+
+
+window.onload = () => {
+    // about
+    let titleText = new SplitText(".title", { type: 'chars, words, lines'})
+    let chars = titleText.chars;
+    
+    const tl_About = gsap.timeline({
+        scrollTrigger: {
+            trigger: 'section#about',
+            start: "top 1%",
+            bottom: 'bottom 0',
+            markers: true,
+        }
     })
-    .from(
-        ".first p",
-        {
-            x: -100,
-            rotation: 360,
-        },
-        "-=1.8",
-    )
-    .from(
-        ".first figure",
-        {
-            scale: 3,
-            rotation: 360,
-            duration: 1,
-        },
-        "-=2",
-    );
-
-const secondTl = gsap.timeline({
-    scrollTrigger: {
-        trigger: "section.second",
-        start: "top 0%",
-        end: "+=2000",
-        scrub: true,
-        pin: true,
-    },
-    defaults: {
-        opacity: 0,
-        ease: "power2.inOut",
-    },
-});
-
-secondTl
-    .from(".second h2", {
-        y: 1000,
+    tl_About.from(chars, {
+        y: '100%',
+        stagger: '0.02',
+        duration: '1',
+        ease: 'back.out',
     })
-    .from(".second p", {
-        y: -1000,
-    })
-    .from(".second figure", {});
-
-const thirdTl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".third",
-        stat: "top 20%",
-        end: "+=5000",
-        scrub: true,
-        pin: true,
-    },
-    defaults: {
+    .to(chars, {
         opacity: 0,
-    },
-});
-
-thirdTl.from(".third h2", {
-    x: 1000,
-    duration: 2,
-});
-thirdTl
-    .from(
-        ".third p",
-        {
-            x: -1000,
-            duration: 2,
-        },
-        "-=0.5",
-    )
-    .fromTo(
-        ".third figure",
-        {
-            scale: 1,
-            opacity: 1,
-        },
-        {
-            scale: 500,
-            opacity: 1,
-            backgroundColor: '#000',
-            duration: 30
-        },
-        "+=3",
-    );
+    },'+=1')
+    .from('section#about p', {
+        opacity: 0,
+    })
+}

@@ -128,4 +128,8 @@ section figure {
 }
 section ~ section {
   border-top: 1px solid #fff;
+}
+
+.section-header {
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
