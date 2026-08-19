@@ -9,8 +9,11 @@
     }
 }
 
-#about {
+#intro {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100svh;
     padding: 100px 0 60px;
     color: #fff;
@@ -21,8 +24,10 @@
         > div {
             &.section-header {
                 position: relative;
+                text-align: center;
                 .split-title {
                     letter-spacing: 10px;
+                    font-size: 100px;
                 }
 
             }
@@ -83,27 +88,5 @@
                 z-index: 4;
             }
         }
-    }
-}
-
-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: #000;
-    min-height: 100svh;
-    h2 {
-        font-size: 100px;
-    }
-    p {
-        font-size: 30px;
-    }
-    figure {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    & ~ section {
-        border-top: 1px solid #fff;
     }
 }

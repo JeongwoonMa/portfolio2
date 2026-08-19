@@ -13,7 +13,7 @@ gsap.to(".bg-list .bg-img img", {
 
 const tl_1 = gsap.timeline({
     scrollTrigger: {
-        trigger: "#about",
+        trigger: "#intro",
         start: "top 1%",
         end: "bottom bottom",
     },
@@ -45,20 +45,21 @@ tl_1.from(".bg-list .bg-img", {
         opacity: 0,
         stagger: 0.2,
         ease: "back.out",
-    });
+    })
 const tl_2 = gsap.timeline({
     scrollTrigger: {
-        trigger: "#about",
-        start: "bottom 100%", // #about 끝날 때 시작
+        trigger: "#intro",
+        start: "bottom 100%", // #intro 끝날 때 시작
         end: "+=700",
         scrub: true,
         pin: true,
     },
 });
 
-tl_2.to("#about .split-title", {
+tl_2.to("#intro .split-title", {
     scale: 50,
     transformOrigin: "center center",
+    opacity: 0,
     duration: 5
 })
 .to(".bg-list .bg-fade", {
