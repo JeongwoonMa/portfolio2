@@ -104,12 +104,16 @@ input, select, textarea {
   min-height: 100svh;
   padding: 100px 0 60px;
   color: #fff;
+  overflow: hidden;
 }
 #about .container {
   position: relative;
   z-index: 10;
 }
-#about .container .split-title {
+#about .container > div.section-header {
+  position: relative;
+}
+#about .container > div.section-header .split-title {
   letter-spacing: 10px;
 }
 #about .bg-list {
@@ -166,6 +170,10 @@ input, select, textarea {
   -o-object-position: 100% 0;
      object-position: 100% 0;
 }
+#about .bg-list > div.bg-fade {
+  position: relative;
+  z-index: 4;
+}
 
 section {
   display: flex;
@@ -173,7 +181,6 @@ section {
   justify-content: center;
   text-align: center;
   background-color: #000;
-  overflow: hidden;
   min-height: 100svh;
 }
 section h2 {
@@ -188,8 +195,4 @@ section figure {
 }
 section ~ section {
   border-top: 1px solid #fff;
-}
-
-.section-header {
-  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */

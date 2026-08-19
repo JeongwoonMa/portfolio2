@@ -14,11 +14,18 @@
     min-height: 100svh;
     padding: 100px 0 60px;
     color: #fff;
+    overflow: hidden;
     .container {
         position: relative;
         z-index: 10;
-        .split-title {
-            letter-spacing: 10px;
+        > div {
+            &.section-header {
+                position: relative;
+                .split-title {
+                    letter-spacing: 10px;
+                }
+
+            }
         }
     }
     .bg-list {
@@ -71,6 +78,10 @@
                     object-position: 100% 0;
                 }
             }
+            &.bg-fade {
+                position: relative;
+                z-index: 4;
+            }
         }
     }
 }
@@ -81,7 +92,6 @@ section {
     justify-content: center;
     text-align: center;
     background-color: #000;
-    overflow: hidden;
     min-height: 100svh;
     h2 {
         font-size: 100px;
@@ -96,8 +106,4 @@ section {
     & ~ section {
         border-top: 1px solid #fff;
     }
-}
-
-.section-header {
-    overflow: hidden;
 }
