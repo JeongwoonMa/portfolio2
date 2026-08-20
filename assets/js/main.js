@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
 window.onload = () => {
     let splitTxt = new SplitText(".split-title", { type: "chars, words, lines" });
     let titleSplit = splitTxt.chars;
-
+    
     gsap.to(".bg-list .bg-img img", {
         opacity: 0.3,
         duration: 1,
@@ -11,7 +11,7 @@ window.onload = () => {
         yoyo: true,
         ease: "power1.inOut",
     });
-
+    
     const tl_1 = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro",
@@ -32,21 +32,17 @@ window.onload = () => {
             },
             "-=2",
         )
-        .from(
-            ".bg-list .bg-earth",
-            {
+        .from(".bg-list .bg-earth", {
                 y: "10%",
                 duration: 1.5,
                 opacity: 0,
-            },
-            "-=1.9",
-        )
+            },"-=1.9",)
         .from(titleSplit, {
             y: "50%",
             opacity: 0,
             stagger: 0.2,
             ease: "back.out",
-        });
+        })
     const tl_2 = gsap.timeline({
         scrollTrigger: {
             trigger: "#intro",
@@ -56,19 +52,16 @@ window.onload = () => {
             pin: true,
         },
     });
-
+    
     tl_2.to("#intro .split-title", {
         scale: 50,
         transformOrigin: "center center",
         opacity: 0,
         duration: 5,
-        className: "split-title",
-    }).to(
-        ".bg-list .bg-fade",
-        {
-            backgroundColor: "#000",
-            duration: 5,
-        },
-        0,
-    );
-};
+    })
+    .to(".bg-list .bg-fade", {
+        backgroundColor: "#000",
+        duration: 5
+    },'<');    
+}
+
