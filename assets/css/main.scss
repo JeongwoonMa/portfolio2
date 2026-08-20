@@ -94,3 +94,18 @@
         }
     }
 }
+
+/* about */
+.about {
+    height: 100svh;
+    .container {
+        > div {
+            &.section-header {
+                > h2 {
+                    display: block;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

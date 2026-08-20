@@ -185,4 +185,13 @@ input, select, textarea {
 #intro .bg-list > div.bg-fade {
   position: relative;
   z-index: 4;
+}
+
+/* about */
+.about {
+  height: 100svh;
+}
+.about .container > div.section-header > h2 {
+  display: block;
+  font-size: 30px;
 }/*# sourceMappingURL=main.css.map */
