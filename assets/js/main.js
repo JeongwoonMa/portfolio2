@@ -50,7 +50,7 @@ const tl_2 = gsap.timeline({
     scrollTrigger: {
         trigger: "#intro",
         start: "bottom 100%", // #intro 끝날 때 시작
-        end: "+=700",
+        end: "+=1500",
         scrub: true,
         pin: true,
     },
@@ -60,7 +60,8 @@ tl_2.to("#intro .split-title", {
     scale: 50,
     transformOrigin: "center center",
     opacity: 0,
-    duration: 5
+    duration: 5,
+    className: 'split-title'
 })
 .to(".bg-list .bg-fade", {
     backgroundColor: "#000",
