@@ -1,5 +1,8 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, SplitText);
 
+ScrollTrigger.config({ ignoreMobileResize: true });
+ScrollTrigger.normalizeScroll(true); // 모바일 터치 스크롤을 부드럽게 정규화
+
 let splitTxt = new SplitText(".split-title", { type: "chars, words, lines" });
 let titleSplit = splitTxt.chars;
 
