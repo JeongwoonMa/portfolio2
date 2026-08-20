@@ -106,8 +106,9 @@ input, select, textarea {
   justify-content: center;
   min-height: 100svh;
   padding: 100px 0 60px;
-  color: #fff;
   overflow: hidden;
+  color: #fff;
+  background-color: #000;
 }
 #intro .container {
   position: relative;
