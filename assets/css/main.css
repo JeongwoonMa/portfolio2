@@ -189,7 +189,7 @@ input, select, textarea {
 
 /* about */
 .about {
-  height: 100svh;
+  height: 100vh;
 }
 .about .container > div.section-header > h2 {
   display: block;
