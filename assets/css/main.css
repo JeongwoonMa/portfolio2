@@ -122,6 +122,11 @@ input, select, textarea {
   letter-spacing: 10px;
   font-size: 100px;
 }
+@media (max-width: 1024px) {
+  #intro .container > div.section-header .split-title {
+    font-size: 30px;
+  }
+}
 #intro .bg-list {
   position: absolute;
   top: 0;
